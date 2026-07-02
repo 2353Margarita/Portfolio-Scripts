@@ -133,7 +133,7 @@ public class Cafe_Customer : MonoBehaviour
         };
         wait_order.end_func = () =>
         {
-            ///оплата, забор заказа ...
+            ///РѕРїР»Р°С‚Р°, Р·Р°Р±РѕСЂ Р·Р°РєР°Р·Р° ...
             int i;
             foreach (var orderPart in myOrder.products)
             {
@@ -275,13 +275,13 @@ public class Cafe_Customer : MonoBehaviour
         };
 
         behaviour.Clear();
-        behaviour.Add(go_to_cafe);// движение к кассе, становимся в очередь
-        behaviour.Add(make_order);// создание заказа
-        behaviour.Add(wait_order);// ожидание заказа
-        behaviour.Add(go_to_table);// движение к столику, если есть свободное место
-        behaviour.Add(dinner);// приём пищи
-        behaviour.Add(go_to_door);// движение к двери, радостный смайлик
-        behaviour.Add(go_to_trashcan);// движение к мусорным бакам
-        behaviour.Add(go_to_exit);// движение на выход, удаление
+        behaviour.Add(go_to_cafe);// РґРІРёР¶РµРЅРёРµ Рє РєР°СЃСЃРµ, СЃС‚Р°РЅРѕРІРёРјСЃСЏ РІ РѕС‡РµСЂРµРґСЊ
+        behaviour.Add(make_order);// СЃРѕР·РґР°РЅРёРµ Р·Р°РєР°Р·Р°
+        behaviour.Add(wait_order);// РѕР¶РёРґР°РЅРёРµ Р·Р°РєР°Р·Р°
+        behaviour.Add(go_to_table);// РґРІРёР¶РµРЅРёРµ Рє СЃС‚РѕР»РёРєСѓ, РµСЃР»Рё РµСЃС‚СЊ СЃРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ
+        behaviour.Add(dinner);// РїСЂРёС‘Рј РїРёС‰Рё
+        behaviour.Add(go_to_door);// РґРІРёР¶РµРЅРёРµ Рє РґРІРµСЂРё, СЂР°РґРѕСЃС‚РЅС‹Р№ СЃРјР°Р№Р»РёРє
+        behaviour.Add(go_to_trashcan);// РґРІРёР¶РµРЅРёРµ Рє РјСѓСЃРѕСЂРЅС‹Рј Р±Р°РєР°Рј
+        behaviour.Add(go_to_exit);// РґРІРёР¶РµРЅРёРµ РЅР° РІС‹С…РѕРґ, СѓРґР°Р»РµРЅРёРµ
     }
 }

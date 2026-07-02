@@ -201,7 +201,7 @@ public class Cafe_Chef : MonoBehaviour
             Cafe.Instance.OrderStock.AddItem(currentDish);
             Cafe.Instance.completedOrderParts.products.AddProduct(processedOrederPart);
             processedOrederPart = null;
-            if (Cafe.Instance.OrderIsReady(Cafe.Instance.TargetOrder))// если этот повар принёс последнюю часть заказа, он остаётся у кассы
+            if (Cafe.Instance.OrderIsReady(Cafe.Instance.TargetOrder))// РµСЃР»Рё СЌС‚РѕС‚ РїРѕРІР°СЂ РїСЂРёРЅС‘СЃ РїРѕСЃР»РµРґРЅСЋСЋ С‡Р°СЃС‚СЊ Р·Р°РєР°Р·Р°, РѕРЅ РѕСЃС‚Р°С‘С‚СЃСЏ Сѓ РєР°СЃСЃС‹
             {
                 restPoint = Cafe.Instance.CashierPoint.position;
                 walker.enabled = false;
@@ -233,12 +233,12 @@ public class Cafe_Chef : MonoBehaviour
 
 
         behaviour.Clear();
-        behaviour.Add(wait_customer_order); // ожидание клиента и заказа
-        behaviour.Add(go_to_ingredient);// движение к ингредиентам
-        behaviour.Add(go_to_cook_place);// движение к месту готовки
-        behaviour.Add(cook);// готовка
-        behaviour.Add(go_to_checkout);// движение к кассе, выдача части заказа
-        behaviour.Add(go_to_rest_point);// движение к точке отдыха
+        behaviour.Add(wait_customer_order); // РѕР¶РёРґР°РЅРёРµ РєР»РёРµРЅС‚Р° Рё Р·Р°РєР°Р·Р°
+        behaviour.Add(go_to_ingredient);// РґРІРёР¶РµРЅРёРµ Рє РёРЅРіСЂРµРґРёРµРЅС‚Р°Рј
+        behaviour.Add(go_to_cook_place);// РґРІРёР¶РµРЅРёРµ Рє РјРµСЃС‚Сѓ РіРѕС‚РѕРІРєРё
+        behaviour.Add(cook);// РіРѕС‚РѕРІРєР°
+        behaviour.Add(go_to_checkout);// РґРІРёР¶РµРЅРёРµ Рє РєР°СЃСЃРµ, РІС‹РґР°С‡Р° С‡Р°СЃС‚Рё Р·Р°РєР°Р·Р°
+        behaviour.Add(go_to_rest_point);// РґРІРёР¶РµРЅРёРµ Рє С‚РѕС‡РєРµ РѕС‚РґС‹С…Р°
     }
 
     void FindTask()
@@ -246,7 +246,7 @@ public class Cafe_Chef : MonoBehaviour
         if (Cafe.Instance.TargetOrder == null) return;
 
         foreach (var chef in AllChefs)
-            if (chef.isRest && chef != this && chef.restPoint == Cafe.Instance.CashierPoint.position)// если кто-то стоит на кассе, то он первым берёт задание
+            if (chef.isRest && chef != this && chef.restPoint == Cafe.Instance.CashierPoint.position)// РµСЃР»Рё РєС‚Рѕ-С‚Рѕ СЃС‚РѕРёС‚ РЅР° РєР°СЃСЃРµ, С‚Рѕ РѕРЅ РїРµСЂРІС‹Рј Р±РµСЂС‘С‚ Р·Р°РґР°РЅРёРµ
                 return;
 
         CafeOrder completedPart = new CafeOrder();

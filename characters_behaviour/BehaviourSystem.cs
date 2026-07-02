@@ -14,7 +14,7 @@ public class TaskStep
     public UnityAction process_func;
     public UnityAction end_func;
     public UnityAction init_from_save_data_func;
-    public bool complete = false; // должна изменяться только в process_funk, иначе самостоятельно проверяем CheckEnd()
+    public bool complete = false; // РґРѕР»Р¶РЅР° РёР·РјРµРЅСЏС‚СЊСЃСЏ С‚РѕР»СЊРєРѕ РІ process_funk, РёРЅР°С‡Рµ СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ РїСЂРѕРІРµСЂСЏРµРј CheckEnd()
     bool is_start = false;
     bool is_end = false;
 
