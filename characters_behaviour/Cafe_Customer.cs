@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//-------------------------------- ПОВЕДЕНИЕ NPC - ПОСЕТИТЕЛЬ КАФЕ
+
 public class Cafe_Customer : MonoBehaviour
 {
     public static List<Cafe_Customer> AllCustomers = new List<Cafe_Customer>();

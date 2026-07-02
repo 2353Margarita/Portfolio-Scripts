@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+//-------------------------------- ПОВЕДЕНИЕ NPC - ПОВАР
+
 public class Cafe_Chef : MonoBehaviour
 {
     public static List<Cafe_Chef> AllChefs = new List<Cafe_Chef>();

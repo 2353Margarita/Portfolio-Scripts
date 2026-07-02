@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+//-------------------------------- ПРОСТАЯ СИСТЕМА ПРОГРАММИРОВАНИЯ ПОВЕДЕНИЯ NPC
+
 public class BehaviourSystem : MonoBehaviour
 {
 //....
